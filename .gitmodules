@@ -1,0 +1,3 @@
+[submodule "makeabilitylabwebsite"]
+	path = makeabilitylabwebsite
+	url = git@github.com:mechanicjay/makeabilitylabwebsite.git
