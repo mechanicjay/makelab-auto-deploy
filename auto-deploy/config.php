@@ -13,7 +13,6 @@ $PROD_HOSTNAME = 'makelab-prod.cs.washington.edu';
 
 $TEST_MODE = ''; //'branch name' OR keyword 'TAG
 $PROD_MODE = ''; //'branch name' OR keyword 'TAG'
-$HOSTNAME = 'docker-test.cs.washington.edu';  //The production FQDN where this will be accessed, eg. mydocker.cs.washington.edu
 
 $AUTO_DEPLOY_REPO_URL = 'git@gitlab.cs.washington.edu:lab/docker-auto-deploy.git'; //the ssh repo url of your auto-deploy aproject
 
@@ -29,7 +28,7 @@ $MAIL_CONTAINER_BUILD_RESULTS = TRUE; //Controls sending of docker build output 
 
 $SEND_MAIL_TO = 'jhowe@cs.washington.edu';  //The configured email address(es), comma separated, referenced above
 
-$CONTAINER_NAME = array('makelab'); //A unique name for your container, comma separated, quotes list for multiple containers
+$CONTAINER_NAME = array('makeabilitylabwebsite'); //A unique name for your container, comma separated, quotes list for multiple containers
 
 
 //** Auxiliary Configuration Section **\\
@@ -40,16 +39,16 @@ $CONTAINER_NAME = array('makelab'); //A unique name for your container, comma se
  * depending on needs and architecture.
  */
 
-$SUBMODULE_PATH = 'makelab'; //If you've a git submodule for your containers, enter the relative path here, else ignore
+$SUBMODULE_PATH = 'makeabilitylabwebsite'; //If you've a git submodule for your containers, enter the relative path here, else ignore
 
-$SUBMODULE_REPO_URL = ''; //If you have a git submodule for your container, enter the repo url here, else ignore
+$SUBMODULE_REPO_URL = 'git@github.com:mechanicjay/makeabilitylabwebsite.git'; //If you have a git submodule for your container, enter the repo url here, else ignore
 
 
 //*** DO NOT MODIFY ANYTHING BELOW THIS LINE ***\\
 DEFINE('DEPLOY_KEY', '/var/www/.ssh/id_rsa');
-DEFINE('LOG_FILE', "/var/log/auto-deploy/docker-auto-deploy.txt");
+DEFINE('LOG_FILE', "/var/log/auto-deploy/$PROD_HOSTNAME.txt");
 
-$BASE_DIR = "/var/www/html/auto-deploy/docker-auto-deploy"; 
+$BASE_DIR = "/var/www/html/auto-deploy/$PROD_HOSTNAME"; 
 
 $ALLOWED_HTTP_METHODS = ['GET', 'POST'];
 
