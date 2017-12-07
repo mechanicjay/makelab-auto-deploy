@@ -67,7 +67,7 @@ if($gitSystem && $HOSTNAME && $OPERATION){
 	
 	//Some initial validation, make sure this is a configured repo and stuff
 	if(isset($req['repository']['url'])){
-		$url = validateURL($req['repositoyr']['url'],$DEFINED_REPOS);;
+		$url = validateURL($req['repository']['url'],$DEFINED_REPOS);;
 	
 		if(!$url){
 			_log("This repository is not configured for autodeploy on this system");
