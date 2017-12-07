@@ -28,10 +28,12 @@ if (!in_array($_SERVER['REQUEST_METHOD'], $ALLOWED_HTTP_METHODS)) {
 $gitSystem=null;
 if(isset($headers['X-Gitlab-Event'])){
 	$gitSystem="Gitlab";
+	$urlvar='url';
 
 }
 if(isset($headers['X-GitHub-Event'])){
 	$gitSystem="GitHub";
+	$urlvar='ssh_url';
 }
 
 if($gitSystem){
@@ -67,7 +69,8 @@ if($gitSystem && $HOSTNAME && $OPERATION){
 	
 	//Some initial validation, make sure this is a configured repo and stuff
 	if(isset($req['repository']['url'])){
-		$url = validateURL($req['repository']['url'],$DEFINED_REPOS);;
+		
+		$url = validateURL($req['repository'][$urlvar],$DEFINED_REPOS);;
 	
 		if(!$url){
 			_log("This repository is not configured for autodeploy on this system");
