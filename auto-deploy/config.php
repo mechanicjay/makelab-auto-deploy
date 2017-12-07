@@ -48,7 +48,7 @@ $SUBMODULE_REPO_URL = 'git@github.com:mechanicjay/makeabilitylabwebsite.git'; //
 DEFINE('DEPLOY_KEY', '/var/www/.ssh/id_rsa');
 DEFINE('LOG_FILE', "/var/log/auto-deploy/$PROD_HOSTNAME.txt");
 
-$BASE_DIR = "/var/www/html/auto-deploy/$PROD_HOSTNAME"; 
+$BASE_DIR = "/var/www/vhosts/$PROD_HOSTNAME"; 
 
 $ALLOWED_HTTP_METHODS = ['GET', 'POST'];
 
