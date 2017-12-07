@@ -61,7 +61,7 @@ if (!$gitSystem) {
 }
 
 //Make a determiniation if the incoming operation is right for this system.
-if($gitsystem && $HOSTNAME && $OPERATION){
+if($gitSystem && $HOSTNAME && $OPERATION){
 	$refs=explode("/",$req['ref']);
 	$incomingOp=$refs[1]; // should be tags or heads
 	
