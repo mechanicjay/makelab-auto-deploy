@@ -11,10 +11,10 @@
 $TEST_HOSTNAME = 'makelab-test.cs.washington.edu';
 $PROD_HOSTNAME = 'makelab-prod.cs.washington.edu';
 
-$TEST_MODE = ''; //'branch name' OR keyword 'TAG
-$PROD_MODE = ''; //'branch name' OR keyword 'TAG'
+$TEST_MODE = 'master'; //'branch name' OR keyword 'TAG
+$PROD_MODE = 'TAG'; //'branch name' OR keyword 'TAG'
 
-$AUTO_DEPLOY_REPO_URL = 'git@gitlab.cs.washington.edu:lab/docker-auto-deploy.git'; //the ssh repo url of your auto-deploy aproject
+$AUTO_DEPLOY_REPO_URL = 'git@github.com:mechanicjay/makelab-auto-deploy.git'; //the ssh repo url of your auto-deploy aproject
 
 //$DEPLOY_BRANCH = 'master'; //default setup is for the branch named here to be pushed to test on every push, with a 'tag push' to deploy to production.  
 
